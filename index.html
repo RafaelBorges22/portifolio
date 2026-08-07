@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rafael Mascarenhas Borges — Portfólio</title>
+
+<meta name="description" content="Portfólio acadêmico e profissional de Rafael Mascarenhas Borges: desenvolvedor back-end com foco em Python, FastAPI, APIs REST, bancos de dados e qualidade de software.">
+<meta name="author" content="Rafael Mascarenhas Borges">
+<meta name="theme-color" content="#07090c">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rafael Mascarenhas Borges — Portfólio">
+<meta property="og:description" content="Desenvolvedor back-end · APIs REST · Qualidade de Software. Projetos dos 5 primeiros semestres.">
+<meta property="og:image" content="assets/img/foto.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2322d3ee'/><text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%2304161b'>RB</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ====================== Navegação ====================== -->
+<header class="nav">
+  <nav class="container nav__inner" aria-label="Navegação principal">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">RB</span>
+      <span class="brand__text">Rafael Borges</span>
+    </a>
+
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+    </button>
+
+    <ul class="nav__links" id="menu">
+      <li><a class="nav__link" href="#sobre">Sobre</a></li>
+      <li><a class="nav__link" href="#formacao">Formação</a></li>
+      <li><a class="nav__link" href="#experiencia">Experiência</a></li>
+      <li><a class="nav__link" href="#cursos">Cursos</a></li>
+      <li><a class="nav__link" href="#idiomas">Idiomas</a></li>
+      <li><a class="nav__link" href="#projetos">Projetos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <span id="top"></span>
+
+  <!-- ====================== Hero ====================== -->
+  <section class="hero" data-mount="hero" aria-label="Apresentação"></section>
+
+  <!-- ====================== Sobre + stack ====================== -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Sobre mim</p>
+        <h2 class="section__title">Quem sou e com o que trabalho</h2>
+      </div>
+
+      <div class="about" data-mount="sobre"></div>
+
+      <div class="section__head reveal" style="margin-block: clamp(2.5rem,6vw,4rem) 1.75rem;">
+        <p class="eyebrow">Stack técnica</p>
+        <h2 class="section__title">Tecnologias que utilizo</h2>
+        <p class="section__desc">Agrupadas por camada, do banco de dados até a interface e a esteira de deploy.</p>
+      </div>
+
+      <div class="stack-grid" data-mount="stack"></div>
+    </div>
+  </section>
+
+  <!-- ====================== Formação ====================== -->
+  <section class="section" id="formacao">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Formação acadêmica</p>
+        <h2 class="section__title">Curso em andamento</h2>
+      </div>
+
+      <div data-mount="formacao"></div>
+    </div>
+  </section>
+
+  <!-- ====================== Experiência ====================== -->
+  <section class="section" id="experiencia">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Experiência profissional</p>
+        <h2 class="section__title">Onde trabalhei e o que fiz</h2>
+      </div>
+
+      <div data-mount="experiencias"></div>
+    </div>
+  </section>
+
+  <!-- ====================== Cursos de extensão ====================== -->
+  <section class="section" id="cursos">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Cursos de extensão</p>
+        <h2 class="section__title">Formação complementar</h2>
+      </div>
+
+      <div data-mount="cursos"></div>
+    </div>
+  </section>
+
+  <!-- ====================== Idiomas ====================== -->
+  <section class="section" id="idiomas">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Idiomas</p>
+        <h2 class="section__title">Línguas que falo</h2>
+      </div>
+
+      <div data-mount="idiomas"></div>
+    </div>
+  </section>
+
+  <!-- ====================== Projetos ====================== -->
+  <section class="section" id="projetos">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Portfólio de projetos</p>
+        <h2 class="section__title">Projetos dos 5 primeiros semestres</h2>
+        <p class="section__desc">Cada card abre a tela completa do projeto, com descrição, tecnologias, screenshots, link do repositório e a minha participação.</p>
+      </div>
+
+      <div class="projects" data-mount="projetos"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" data-mount="footer"></footer>
+
+<noscript>
+  <div class="container" style="padding-block:2rem">
+    <p class="notice">Este portfólio monta o conteúdo com JavaScript a partir de <code>assets/js/data.js</code>. Habilite o JavaScript para visualizar as informações e os projetos.</p>
+  </div>
+</noscript>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
