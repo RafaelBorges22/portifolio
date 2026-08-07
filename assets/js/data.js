@@ -22,7 +22,7 @@ const DATA = {
     nome: "Rafael Mascarenhas Borges",
     nomeCurto: "Rafael Borges",
     iniciais: "RB",
-    headline: "Desenvolvedor <b>Full Stack</b> · Python &amp; FastAPI · React",
+    headline: "Desenvolvedor <b>Full Stack</b> · Python &amp; FastAPI · Java &amp; Spring Boot · React",
 
     // Coloque a foto em assets/img/foto.jpg (recorte vertical, 4:5, ~800x1000px).
     // Enquanto o arquivo não existir, a página mostra um avatar com as iniciais.
