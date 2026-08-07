@@ -110,6 +110,21 @@ Qualidade de Software (§12).
 - Meta tags Open Graph e Twitter Card
 - Sem dependências de runtime além das fontes; nenhum passo de build
 
+## 8.1. Atualização — dados confirmados (2026-08-07)
+
+Aplicados os dados de `context/Pendencias Restantes.md`: perfil (e-mail, local,
+LinkedIn), formação (Fatec Itaquera, DSM, 2024→2026, 6º semestre) e experiência
+atual (STIGMA SYSTEM, Desenvolvedor Full Stack, out/2025).
+
+Mudança de comportamento: **seção sem dados é removida da página e do menu**
+(`ocultarSecao()` em `home.js`), em vez de exibir um aviso de seção vazia. Isso
+vale para `cursos`, `idiomas` e `experiencias`. Consequência: com `cursos: []` e
+`idiomas: []`, as seções correspondentes aos requisitos 7 e 8 não aparecem — a
+decisão é do autor e o risco está registrado em `PENDENCIAS.md`.
+
+Projetos 3–5 passaram a slots neutros (`projeto-03/04/05`), sem nome nem
+tecnologias presumidos, conforme §11 e §13 do documento de pendências.
+
 ## 9. Plano de implementação
 
 1. `assets/css/style.css` — tokens, reset, base, componentes, responsivo, a11y

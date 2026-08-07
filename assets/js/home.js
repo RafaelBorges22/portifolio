@@ -89,20 +89,29 @@
     if (!alvo) return;
 
     const contato = [
-      { rotulo: "E-mail", valor: perfil.email, icone: "mail" },
+      { rotulo: "E-mail", valor: perfil.email, icone: "mail", tipo: "email" },
       { rotulo: "Localização", valor: perfil.local, icone: "pin" },
-      { rotulo: "GitHub", valor: perfil.github, icone: "github", link: true },
-      { rotulo: "LinkedIn", valor: perfil.linkedin, icone: "linkedin", link: true },
+      { rotulo: "GitHub", valor: perfil.github, icone: "github", tipo: "link" },
+      { rotulo: "LinkedIn", valor: perfil.linkedin, icone: "linkedin", tipo: "link" },
     ];
 
     const linhas = contato
-      .map(({ rotulo, valor, icone, link }) => {
-        const url = link ? safeUrl(valor) : "";
-        const conteudo = url
-          ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer" class="crumb">${esc(
-              url.replace(/^https?:\/\//, "")
-            )} ${icon("external", 13)}</a>`
-          : val(valor);
+      .map(({ rotulo, valor, icone, tipo }) => {
+        let conteudo = val(valor);
+
+        if (tipo === "email" && has(valor)) {
+          conteudo = `<a href="mailto:${esc(valor)}" class="crumb">${esc(valor)}</a>`;
+        }
+
+        if (tipo === "link") {
+          const url = safeUrl(valor);
+          if (url) {
+            conteudo = `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer" class="crumb">${esc(
+              url.replace(/^https?:\/\/(www\.)?/, "")
+            )} ${icon("external", 13)}</a>`;
+          }
+        }
+
         return `
           <div class="datalist__row">
             <dt class="datalist__key">${icon(icone, 14)} ${esc(rotulo)}</dt>
@@ -177,7 +186,7 @@
 
     const lista = DATA.experiencias || [];
     if (!lista.length) {
-      alvo.innerHTML = aviso("Nenhuma experiência profissional cadastrada em <code>data.js</code>.");
+      ocultarSecao("experiencia");
       return;
     }
 
@@ -208,7 +217,7 @@
 
     const lista = DATA.cursos || [];
     if (!lista.length) {
-      alvo.innerHTML = aviso("Nenhum curso de extensão cadastrado em <code>data.js</code>.");
+      ocultarSecao("cursos");
       return;
     }
 
@@ -246,7 +255,7 @@
 
     const lista = DATA.idiomas || [];
     if (!lista.length) {
-      alvo.innerHTML = aviso("Nenhum idioma cadastrado em <code>data.js</code>.");
+      ocultarSecao("idiomas");
       return;
     }
 
@@ -323,6 +332,15 @@
   /* --------------------------------------------------------------- Util */
   function aviso(texto) {
     return `<p class="notice reveal">${icon("alert", 18)}<span>${texto} Consulte <code>PENDENCIAS.md</code>.</span></p>`;
+  }
+
+  /**
+   * Remove uma seção inteira da página quando não há dados para ela,
+   * junto com o link correspondente no menu. Evita seção vazia no site.
+   */
+  function ocultarSecao(id) {
+    document.getElementById(id)?.remove();
+    document.querySelector(`.nav__link[href="#${id}"]`)?.closest("li")?.remove();
   }
 
   /* --------------------------------------------------------------- Boot */

@@ -22,23 +22,25 @@ const DATA = {
     nome: "Rafael Mascarenhas Borges",
     nomeCurto: "Rafael Borges",
     iniciais: "RB",
-    headline: "Desenvolvedor <b>Back-end</b> · APIs REST · Qualidade de Software",
+    headline: "Desenvolvedor <b>Full Stack</b> · Python &amp; FastAPI · React",
 
     // Coloque a foto em assets/img/foto.jpg (recorte vertical, 4:5, ~800x1000px).
     // Enquanto o arquivo não existir, a página mostra um avatar com as iniciais.
     foto: "assets/img/foto.jpg",
     fotoAlt: "Foto de Rafael Mascarenhas Borges",
 
-    // Confirme se este é o seu perfil (foi lido da configuração local do Git).
+    // ATENÇÃO: este endereço foi lido da configuração local do Git e ainda
+    // precisa ser confirmado por você. Se estiver errado, corrija aqui E no
+    // array `links` no final deste arquivo.
     github: "https://github.com/RafaelBorges22",
-    linkedin: "[INFORMAR LINKEDIN]",
-    email: "[INFORMAR E-MAIL]",
-    local: "[INFORMAR CIDADE / ESTADO]",
+    linkedin: "https://www.linkedin.com/in/rafael-mascarenhas-borges",
+    email: "rafaelmascarenhasborges@gmail.com",
+    local: "São Paulo, SP",
 
     resumo: [
-      "Desenvolvedor em formação com experiência prática em aplicações web de ponta a ponta: modelagem de banco, construção de APIs REST, integração com o front-end e configuração do ambiente em containers.",
-      "No back-end trabalho principalmente com <strong>Python e FastAPI</strong>, aplicando separação em camadas (controllers, services, repositories), SQLAlchemy com Alembic para migrations e autenticação via JWT. No front-end integro essas APIs usando <strong>React</strong> e <strong>Vue.js</strong>.",
-      "Também tenho forte interesse em <strong>Qualidade de Software</strong> — escrita e execução de casos e cenários de teste, classificação de bugs por severidade e criticidade, análise de causa raiz e testes de API com Postman.",
+      "Desenvolvedor Full Stack na <strong>STIGMA SYSTEM</strong> e estudante de Desenvolvimento de Software Multiplataforma na Fatec Itaquera. Trabalho em aplicações web de ponta a ponta: modelagem de banco, construção de APIs REST, integração com o front-end e configuração do ambiente em containers.",
+      "No back-end trabalho principalmente com <strong>Python e FastAPI</strong>, aplicando separação em camadas (controllers, services, repositories), SQLAlchemy com Alembic para migrations e autenticação via JWT. No front-end integro essas APIs usando <strong>React</strong>, e também tenho experiência com Vue.js e Quasar.",
+      "Além do desenvolvimento, tenho interesse em <strong>Qualidade de Software</strong> — escrita e execução de casos e cenários de teste, classificação de bugs por severidade e criticidade, análise de causa raiz e testes de API com Postman.",
     ],
   },
 
@@ -46,14 +48,12 @@ const DATA = {
      2. Formação acadêmica  (requisito 5)
      ------------------------------------------------------------------------ */
   formacao: {
-    // O requisito da disciplina veio da Fatec / Centro Paula Souza.
-    // Preencha com a unidade e o nome exato do curso conforme sua matrícula.
-    instituicao: "[INFORMAR FACULDADE / UNIDADE]",
-    curso: "[INFORMAR NOME DO CURSO]",
-    inicio: "[INFORMAR ANO/SEMESTRE DE INÍCIO]",
-    conclusao: "[INFORMAR PREVISÃO DE CONCLUSÃO]",
+    instituicao: "Fatec Itaquera",
+    curso: "Desenvolvimento de Software Multiplataforma",
+    inicio: "2024",
+    conclusao: "2026",
     situacao: "Cursando",
-    semestreAtual: "[INFORMAR SEMESTRE ATUAL]",
+    semestreAtual: "6º semestre",
     disciplina: "Laboratório de Desenvolvimento Multiplataforma",
   },
 
@@ -64,90 +64,73 @@ const DATA = {
      ------------------------------------------------------------------------ */
   experiencias: [
     {
-      empresa: "[INFORMAR NOME DA EMPRESA]",
-      cargo: "[INFORMAR CARGO / FUNÇÃO]",
-      inicio: "[INFORMAR DATA DE INÍCIO]",
+      empresa: "STIGMA SYSTEM",
+      cargo: "Desenvolvedor Full Stack",
+      inicio: "Outubro de 2025",
       fim: "",
       atual: true,
-      local: "[INFORMAR CIDADE / MODELO DE TRABALHO]",
-      // As atividades abaixo refletem o que está registrado no seu contexto
-      // técnico. Ajuste a redação para o que você realmente executa no cargo.
+      local: "São Paulo, SP",
       atividades: [
-        "Desenvolvimento e manutenção de APIs REST em Python/FastAPI com arquitetura em camadas.",
-        "Modelagem de banco de dados PostgreSQL, versionamento de schema com Alembic e consultas via SQLAlchemy.",
-        "Implementação de autenticação e autorização com JWT e controle de acesso por permissões.",
-        "Integração do back-end com interfaces em React, incluindo formulários e componentes de lançamento de horas.",
-        "Configuração de ambientes com Docker e Docker Compose (API, PostgreSQL e pgAdmin em containers).",
-        "Geração de relatórios em Excel e rotinas de cálculo de horas e valores.",
+        "Desenvolvimento e manutenção de aplicações web, atuando tanto no back-end quanto no front-end.",
+        "Construção de APIs REST e implementação de regras de negócio da aplicação.",
+        "Integração com bancos de dados e modelagem das entidades do domínio.",
+        "Implementação de autenticação e controle de acesso.",
+        "Integração entre os diferentes componentes da aplicação, conectando interface e API.",
+        "Trabalho com Python, FastAPI, React, PostgreSQL, Docker e outras tecnologias utilizadas no desenvolvimento dos sistemas.",
       ],
     },
-    // Duplique o bloco abaixo para cada experiência anterior. Se não houver
-    // experiência anterior, apague este objeto por completo.
+
+    /* Se você tiver uma experiência ANTERIOR que queira apresentar, descomente
+       o bloco abaixo e preencha. Se não tiver, deixe como está.
+
     {
-      empresa: "[INFORMAR EMPRESA ANTERIOR — ou apague este bloco]",
-      cargo: "[INFORMAR CARGO / FUNÇÃO]",
-      inicio: "[INFORMAR DATA DE INÍCIO]",
-      fim: "[INFORMAR DATA DE DESLIGAMENTO]",
+      empresa: "",
+      cargo: "",
+      inicio: "",
+      fim: "",
       atual: false,
-      local: "[INFORMAR CIDADE]",
-      atividades: [
-        "[INFORMAR ATIVIDADE 1]",
-        "[INFORMAR ATIVIDADE 2]",
-      ],
+      local: "",
+      atividades: ["", ""],
     },
+    */
   ],
 
   /* ------------------------------------------------------------------------
      4. Cursos de extensão  (requisito 7)
-     Não invente cursos. Se não fez nenhum, deixe o array vazio: cursos: []
+
+     Array vazio = a seção "Cursos de extensão" NÃO aparece no site.
+
+     ATENÇÃO: o requisito 7 da disciplina pede explicitamente os cursos de
+     extensão. Se você tiver QUALQUER curso ou certificado (Alura, Udemy,
+     Fatec, Senai, bootcamp, curso da própria empresa...), vale a pena
+     adicionar — basta descomentar o bloco abaixo e preencher.
+
+     cursos: [
+       {
+         nome: "",
+         instituicao: "",
+         local: "",           // cidade ou "Online"
+         cargaHoraria: "",    // ex: "40 horas"
+         inicio: "",
+         fim: "",
+         certificado: "",     // URL do certificado (opcional)
+       },
+     ],
      ------------------------------------------------------------------------ */
-  cursos: [
-    {
-      nome: "[INFORMAR NOME DO CURSO]",
-      instituicao: "[INFORMAR INSTITUIÇÃO]",
-      local: "[INFORMAR LOCAL / ONLINE]",
-      cargaHoraria: "[INFORMAR CARGA HORÁRIA]",
-      inicio: "[INFORMAR DATA DE INÍCIO]",
-      fim: "[INFORMAR DATA DE TÉRMINO]",
-      certificado: "",
-    },
-    {
-      nome: "[INFORMAR NOME DO CURSO]",
-      instituicao: "[INFORMAR INSTITUIÇÃO]",
-      local: "[INFORMAR LOCAL / ONLINE]",
-      cargaHoraria: "[INFORMAR CARGA HORÁRIA]",
-      inicio: "[INFORMAR DATA DE INÍCIO]",
-      fim: "[INFORMAR DATA DE TÉRMINO]",
-      certificado: "",
-    },
-  ],
+  cursos: [],
 
   /* ------------------------------------------------------------------------
      5. Idiomas  (requisito 8)
-     `escala` aceita: Básico | Intermediário | Avançado | Fluente | Nativo
-     `pct` (0–100) controla o tamanho da barra.
+
+     Array vazio = a seção "Idiomas" NÃO aparece no site.
+     Definido assim porque você informou falar apenas português.
+
+     ATENÇÃO: o requisito 8 pede "línguas que fala e nível em cada língua".
+     Para exibir a seção com o português, basta usar:
+
+     idiomas: [{ idioma: "Português", nivel: "Nativo", pct: 100, nota: "" }],
      ------------------------------------------------------------------------ */
-  idiomas: [
-    {
-      idioma: "Português",
-      nivel: "Nativo",
-      pct: 100,
-      nota: "",
-    },
-    {
-      idioma: "Inglês",
-      nivel: "[INFORMAR NÍVEL]",
-      pct: 0,
-      nota: "Informe o nível (ex: Intermediário / B1) e ajuste `pct`.",
-    },
-    // Adicione outros idiomas ou apague este bloco se não houver.
-    {
-      idioma: "[INFORMAR IDIOMA — ou apague este bloco]",
-      nivel: "[INFORMAR NÍVEL]",
-      pct: 0,
-      nota: "",
-    },
-  ],
+  idiomas: [],
 
   /* ------------------------------------------------------------------------
      6. Stack técnica
@@ -229,7 +212,8 @@ const DATA = {
         "Cadastro de projetos, usuários, serviços e fornecedores",
         "Associação de serviços e POs aos projetos",
         "Controle de alocações por fornecedor, perfil e frente",
-        "Apuração de consumo mensal com cálculo de horas e valores",
+        "Apuração de consumo mensal com cálculo de horas",
+        "Cálculos financeiros a partir dos valores unitários e das horas apuradas",
         "Geração de relatórios exportados em Excel",
         "Upload e gerenciamento de arquivos",
         "Autenticação JWT com controle de acesso por permissões",
@@ -305,7 +289,7 @@ const DATA = {
 
       tecnologias: [
         "Python", "FastAPI", "SQLAlchemy", "Pydantic", "Alembic",
-        "PostgreSQL", "JWT", "Docker", "Postman",
+        "PostgreSQL", "JWT", "Docker", "Postman", "Swagger / OpenAPI",
       ],
 
       participacao: [
@@ -328,26 +312,40 @@ const DATA = {
     },
 
     /* ----------------------------------------------------------------------
-       Os três projetos abaixo são as vagas dos semestres restantes.
-       As tecnologias listadas seguem o seu contexto técnico — troque o nome,
-       a descrição, o link e as screenshots pelos dados reais do projeto.
+       PROJETOS 3, 4 e 5 — ainda não identificados.
+
+       Nada aqui foi presumido de propósito: nome, tecnologias e contexto
+       ficam em branco até você indicar QUAIS projeto reais entram.
+
+       Ordem de prioridade para escolher (do mais para o menos relevante):
+         1. Projetos acadêmicos da Fatec
+         2. Projetos interdisciplinares
+         3. Projetos profissionais que possam ser apresentados
+         4. Projetos pessoais relevantes
+
+       Ao preencher, troque também o `slug` por algo descritivo
+       (só minúsculas e hífens) — ele é o que vai na URL.
+
+       Regra: só liste em `tecnologias` o que realmente foi usado NAQUELE
+       projeto. E em `participacao`, descreva o que VOCÊ fez, não o que o
+       projeto tem.
        ---------------------------------------------------------------------- */
     {
-      slug: "projeto-java-spring",
-      nome: "[INFORMAR NOME DO PROJETO — Java / Spring Boot]",
+      slug: "projeto-03",
+      nome: "[INFORMAR NOME DO PROJETO]",
       semestre: "[INFORMAR SEMESTRE]",
-      categoria: "Acadêmico",
+      categoria: "[INFORMAR CONTEXTO]",
       periodo: "[INFORMAR PERÍODO]",
       destaque: false,
       resumo:
-        "Vaga reservada para o projeto acadêmico desenvolvido em Java com Spring Boot. Preencha a descrição, o repositório e as screenshots no arquivo assets/js/data.js.",
+        "Projeto ainda não definido. Escolha um projeto real dos seus primeiros semestres e preencha os campos deste bloco em assets/js/data.js.",
 
       capa: "",
 
       descricao: [
         "[INFORMAR: qual problema o projeto resolve]",
         "[INFORMAR: qual era o objetivo e como o sistema funciona]",
-        "[INFORMAR: qual foi o contexto acadêmico — disciplina e semestre]",
+        "[INFORMAR: qual foi o contexto — disciplina, semestre ou empresa]",
       ],
 
       funcionalidades: [
@@ -355,7 +353,7 @@ const DATA = {
         "[INFORMAR FUNCIONALIDADE 2]",
       ],
 
-      tecnologias: ["Java", "Spring Boot", "APIs REST", "SQL", "MySQL", "Git"],
+      tecnologias: ["[INFORMAR TECNOLOGIAS]"],
 
       participacao: [
         "[INFORMAR: o que exatamente você desenvolveu neste projeto]",
@@ -368,21 +366,21 @@ const DATA = {
     },
 
     {
-      slug: "projeto-frontend",
-      nome: "[INFORMAR NOME DO PROJETO — Front-end Vue.js / React]",
+      slug: "projeto-04",
+      nome: "[INFORMAR NOME DO PROJETO]",
       semestre: "[INFORMAR SEMESTRE]",
-      categoria: "Acadêmico",
+      categoria: "[INFORMAR CONTEXTO]",
       periodo: "[INFORMAR PERÍODO]",
       destaque: false,
       resumo:
-        "Vaga reservada para o projeto de interface desenvolvido com Vue.js/Quasar ou React, demonstrando componentização, formulários, listagens e consumo de API.",
+        "Projeto ainda não definido. Escolha um projeto real dos seus primeiros semestres e preencha os campos deste bloco em assets/js/data.js.",
 
       capa: "",
 
       descricao: [
         "[INFORMAR: qual problema o projeto resolve]",
-        "[INFORMAR: qual era o objetivo e como a interface funciona]",
-        "[INFORMAR: qual foi o contexto acadêmico — disciplina e semestre]",
+        "[INFORMAR: qual era o objetivo e como o sistema funciona]",
+        "[INFORMAR: qual foi o contexto — disciplina, semestre ou empresa]",
       ],
 
       funcionalidades: [
@@ -390,11 +388,11 @@ const DATA = {
         "[INFORMAR FUNCIONALIDADE 2]",
       ],
 
-      tecnologias: ["JavaScript", "Vue.js", "Quasar", "Vite", "Axios", "Tailwind CSS"],
+      tecnologias: ["[INFORMAR TECNOLOGIAS]"],
 
       participacao: [
-        "[INFORMAR: quais telas e componentes você construiu]",
-        "[INFORMAR: como fez a integração com a API]",
+        "[INFORMAR: o que exatamente você desenvolveu neste projeto]",
+        "[INFORMAR: quais tecnologias você usou na sua parte]",
       ],
 
       repo: "[INFORMAR LINK DO REPOSITÓRIO]",
@@ -403,21 +401,21 @@ const DATA = {
     },
 
     {
-      slug: "projeto-banco-de-dados",
-      nome: "[INFORMAR NOME DO PROJETO — Banco de Dados]",
+      slug: "projeto-05",
+      nome: "[INFORMAR NOME DO PROJETO]",
       semestre: "[INFORMAR SEMESTRE]",
-      categoria: "Acadêmico",
+      categoria: "[INFORMAR CONTEXTO]",
       periodo: "[INFORMAR PERÍODO]",
       destaque: false,
       resumo:
-        "Vaga reservada para o projeto de modelagem e consultas em banco de dados (MySQL, PostgreSQL ou MongoDB), incluindo modelo conceitual, lógico e físico.",
+        "Projeto ainda não definido. Escolha um projeto real dos seus primeiros semestres e preencha os campos deste bloco em assets/js/data.js.",
 
       capa: "",
 
       descricao: [
         "[INFORMAR: qual problema o projeto resolve]",
-        "[INFORMAR: qual foi o escopo da modelagem e quais consultas foram desenvolvidas]",
-        "[INFORMAR: qual foi o contexto acadêmico — disciplina e semestre]",
+        "[INFORMAR: qual era o objetivo e como o sistema funciona]",
+        "[INFORMAR: qual foi o contexto — disciplina, semestre ou empresa]",
       ],
 
       funcionalidades: [
@@ -425,11 +423,11 @@ const DATA = {
         "[INFORMAR FUNCIONALIDADE 2]",
       ],
 
-      tecnologias: ["SQL", "MySQL", "PostgreSQL", "MongoDB", "Modelagem de dados"],
+      tecnologias: ["[INFORMAR TECNOLOGIAS]"],
 
       participacao: [
-        "[INFORMAR: qual parte da modelagem e das consultas você fez]",
-        "[INFORMAR: quais ferramentas você utilizou]",
+        "[INFORMAR: o que exatamente você desenvolveu neste projeto]",
+        "[INFORMAR: quais tecnologias você usou na sua parte]",
       ],
 
       repo: "[INFORMAR LINK DO REPOSITÓRIO]",
@@ -443,7 +441,7 @@ const DATA = {
      ------------------------------------------------------------------------ */
   links: [
     { rotulo: "GitHub", url: "https://github.com/RafaelBorges22", icone: "github" },
-    { rotulo: "LinkedIn", url: "[INFORMAR LINKEDIN]", icone: "linkedin" },
-    { rotulo: "E-mail", url: "[INFORMAR E-MAIL]", icone: "mail" },
+    { rotulo: "LinkedIn", url: "https://www.linkedin.com/in/rafael-mascarenhas-borges", icone: "linkedin" },
+    { rotulo: "E-mail", url: "mailto:rafaelmascarenhasborges@gmail.com", icone: "mail" },
   ],
 };
