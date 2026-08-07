@@ -39,8 +39,8 @@ const DATA = {
 
     resumo: [
       "Desenvolvedor Full Stack na <strong>STIGMA SYSTEM</strong> e estudante de Desenvolvimento de Software Multiplataforma na Fatec Itaquera. Trabalho em aplicações web de ponta a ponta: modelagem de banco, construção de APIs REST, integração com o front-end e configuração do ambiente em containers.",
-      "No back-end trabalho principalmente com <strong>Python e FastAPI</strong>, aplicando separação em camadas (controllers, services, repositories), SQLAlchemy com Alembic para migrations e autenticação via JWT. No front-end integro essas APIs usando <strong>React</strong>, e também tenho experiência com Vue.js e Quasar.",
-      "Além do desenvolvimento, tenho interesse em <strong>Qualidade de Software</strong> — escrita e execução de casos e cenários de teste, classificação de bugs por severidade e criticidade, análise de causa raiz e testes de API com Postman.",
+      "No back-end trabalho principalmente com <strong>Python e FastAPI</strong>, aplicando separação em camadas (controllers, services, repositories), SQLAlchemy com Alembic para migrations e autenticação via JWT. Tenho experiência também com <strong>Java e Spring Boot</strong> na construção de APIs REST. No front-end integro essas APIs usando <strong>React</strong>, além de Vue.js e Quasar.",
+      "Além do desenvolvimento, trabalho com <strong>Qualidade de Software</strong> — escrita e execução de casos e cenários de teste, automação de testes com <strong>Selenium</strong>, testes de API com Postman, classificação de bugs por severidade e criticidade e análise de causa raiz.",
     ],
   },
 
@@ -171,8 +171,9 @@ const DATA = {
       grupo: "Qualidade de Software",
       icone: "check",
       itens: [
-        "Casos de teste", "Cenários de teste", "Severidade e criticidade",
-        "Análise de causa raiz", "SLA", "Gestão de incidentes", "Postman",
+        "Selenium", "Automação de testes", "Casos de teste", "Cenários de teste",
+        "Severidade e criticidade", "Análise de causa raiz", "SLA",
+        "Gestão de incidentes", "Postman",
       ],
     },
     {
