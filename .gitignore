@@ -19,6 +19,10 @@ context/
 # Especificações e documentos de design gerados durante o desenvolvimento.
 docs/
 
+# Checklist interno do que ainda falta preencher no portfólio. É uma nota de
+# trabalho — continua no seu computador, mas não precisa aparecer no GitHub.
+PENDENCIAS.md
+
 # --------------------------------------------------------------------------
 # Sistema operacional
 # --------------------------------------------------------------------------
