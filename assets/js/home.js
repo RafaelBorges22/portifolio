@@ -22,7 +22,7 @@
     alvo.innerHTML = `
       <div class="container hero__grid">
         <div class="hero__intro reveal">
-          <p class="eyebrow">Portfólio · ${esc(formacao.disciplina)}</p>
+          <p class="eyebrow">${esc(perfil.eyebrow)}</p>
 
           <h1 class="hero__name">
             Rafael <span class="grad">Mascarenhas</span><br>Borges
@@ -165,7 +165,6 @@
       ["Previsão de conclusão", "calendar", f.conclusao],
       ["Semestre atual", "list", f.semestreAtual],
       ["Situação", "check", f.situacao],
-      ["Disciplina", "code", f.disciplina],
     ]
       .map(
         ([k, ic, v]) => `
@@ -306,7 +305,7 @@
         return `
         <article class="card pcard reveal">
           <div class="pcard__media">
-            <span class="badge">${String(i + 1).padStart(2, "0")} · ${val(p.semestre)}</span>
+            <span class="badge">${String(i + 1).padStart(2, "0")} · ${val(p.periodo)}</span>
             ${imgOrFallback(p.capa, `Capa do projeto ${isPending(p.nome) ? "" : p.nome}`.trim(), "capa")}
           </div>
 

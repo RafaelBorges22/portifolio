@@ -16,17 +16,23 @@
 
 const DATA = {
   /* ------------------------------------------------------------------------
-     1. Perfil  (requisitos 2, 3, 4)
+     1. Perfil
      ------------------------------------------------------------------------ */
   perfil: {
     nome: "Rafael Mascarenhas Borges",
     nomeCurto: "Rafael Borges",
     iniciais: "RB",
+
+    // Linha pequena acima do nome, no topo da página.
+    eyebrow: "Portfólio pessoal · São Paulo, Brasil",
+
     headline: "Desenvolvedor <b>Full Stack</b> · Python &amp; FastAPI · Java &amp; Spring Boot · React",
 
-    // Coloque a foto em assets/img/foto.jpg (recorte vertical, 4:5, ~800x1000px).
-    // Enquanto o arquivo não existir, a página mostra um avatar com as iniciais.
-    foto: "assets/img/foto.jpg",
+    // A moldura da foto é 4:5 (vertical) e usa `object-fit: cover`, então a
+    // imagem é centralizada e o excedente é cortado — uma foto quadrada perde
+    // ~10% de cada lateral. Se trocar, o ideal é um recorte 4:5 (~800x1000px).
+    // Se o arquivo não existir, a página mostra um avatar com as iniciais.
+    foto: "assets/img/projetos/imagem-perfil.jpg",
     fotoAlt: "Foto de Rafael Mascarenhas Borges",
 
     // ATENÇÃO: este endereço foi lido da configuração local do Git e ainda
@@ -38,14 +44,14 @@ const DATA = {
     local: "São Paulo, SP",
 
     resumo: [
-      "Desenvolvedor Full Stack na <strong>STIGMA SYSTEM</strong> e estudante de Desenvolvimento de Software Multiplataforma na Fatec Itaquera. Trabalho em aplicações web de ponta a ponta: modelagem de banco, construção de APIs REST, integração com o front-end e configuração do ambiente em containers.",
+      "Desenvolvedor Full Stack na <strong>STIGMA SYSTEM</strong>, graduando em Desenvolvimento de Software Multiplataforma na Fatec Itaquera. Trabalho em aplicações web de ponta a ponta: modelagem de banco, construção de APIs REST, integração com o front-end e configuração do ambiente em containers.",
       "No back-end trabalho principalmente com <strong>Python e FastAPI</strong>, aplicando separação em camadas (controllers, services, repositories), SQLAlchemy com Alembic para migrations e autenticação via JWT. Tenho experiência também com <strong>Java e Spring Boot</strong> na construção de APIs REST. No front-end integro essas APIs usando <strong>React</strong>, além de Vue.js e Quasar.",
       "Além do desenvolvimento, trabalho com <strong>Qualidade de Software</strong> — escrita e execução de casos e cenários de teste, automação de testes com <strong>Selenium</strong>, testes de API com Postman, classificação de bugs por severidade e criticidade e análise de causa raiz.",
     ],
   },
 
   /* ------------------------------------------------------------------------
-     2. Formação acadêmica  (requisito 5)
+     2. Formação
      ------------------------------------------------------------------------ */
   formacao: {
     instituicao: "Fatec Itaquera",
@@ -54,11 +60,10 @@ const DATA = {
     conclusao: "2026",
     situacao: "Cursando",
     semestreAtual: "6º semestre",
-    disciplina: "Laboratório de Desenvolvimento Multiplataforma",
   },
 
   /* ------------------------------------------------------------------------
-     3. Experiência profissional  (requisito 6)
+     3. Experiência profissional
      Ordem: da mais recente para a mais antiga.
      `atual: true` exibe o selo "Atual" e ignora o campo `fim`.
      ------------------------------------------------------------------------ */
@@ -96,14 +101,13 @@ const DATA = {
   ],
 
   /* ------------------------------------------------------------------------
-     4. Cursos de extensão  (requisito 7)
+     4. Cursos e certificações
 
-     Array vazio = a seção "Cursos de extensão" NÃO aparece no site.
+     Array vazio = a seção "Cursos e certificações" NÃO aparece no site.
 
-     ATENÇÃO: o requisito 7 da disciplina pede explicitamente os cursos de
-     extensão. Se você tiver QUALQUER curso ou certificado (Alura, Udemy,
-     Fatec, Senai, bootcamp, curso da própria empresa...), vale a pena
-     adicionar — basta descomentar o bloco abaixo e preencher.
+     Se você tiver qualquer curso ou certificado (Alura, Udemy, Fatec, Senai,
+     bootcamp, treinamento da empresa...), vale a pena adicionar — basta
+     descomentar o bloco abaixo e preencher.
 
      cursos: [
        {
@@ -120,12 +124,11 @@ const DATA = {
   cursos: [],
 
   /* ------------------------------------------------------------------------
-     5. Idiomas  (requisito 8)
+     5. Idiomas
 
      Array vazio = a seção "Idiomas" NÃO aparece no site.
      Definido assim porque você informou falar apenas português.
 
-     ATENÇÃO: o requisito 8 pede "línguas que fala e nível em cada língua".
      Para exibir a seção com o português, basta usar:
 
      idiomas: [{ idioma: "Português", nivel: "Nativo", pct: 100, nota: "" }],
@@ -140,7 +143,7 @@ const DATA = {
       grupo: "Back-end",
       icone: "server",
       itens: [
-        "Python", "FastAPI", "Django", "Java", "Spring Boot",
+        "Python", "FastAPI", "Flask", "Django", "Java", "Spring Boot",
         "APIs REST", "SQLAlchemy", "Pydantic", "Alembic", "JWT",
       ],
     },
@@ -187,16 +190,15 @@ const DATA = {
   ],
 
   /* ------------------------------------------------------------------------
-     7. Projetos  (requisito 9)
+     7. Projetos
      Cada objeto gera um card na home e uma tela em projeto.html?p=<slug>
      ------------------------------------------------------------------------ */
   projetos: [
     {
       slug: "gerenciamento-de-projetos",
       nome: "Sistema de Gerenciamento de Projetos e Processos Operacionais",
-      semestre: "[INFORMAR SEMESTRE]",
       categoria: "Profissional",
-      periodo: "[INFORMAR PERÍODO]",
+      periodo: "[INFORMAR PERÍODO]", // ex: "2025" ou "2025 — atual"
       destaque: true,
       resumo:
         "Aplicação web completa para gerenciar projetos, serviços, fornecedores, alocação de recursos, consumo mensal e informações financeiras, com API REST em FastAPI e front-end em React.",
@@ -263,8 +265,7 @@ const DATA = {
     {
       slug: "api-rest-fastapi",
       nome: "API REST em FastAPI com arquitetura em camadas",
-      semestre: "[INFORMAR SEMESTRE]",
-      categoria: "[INFORMAR CONTEXTO — Acadêmico ou Profissional]",
+      categoria: "[INFORMAR CONTEXTO]", // ex: "Pessoal", "Profissional", "Estudo"
       periodo: "[INFORMAR PERÍODO]",
       destaque: false,
       resumo:
@@ -313,16 +314,14 @@ const DATA = {
     },
 
     /* ----------------------------------------------------------------------
-       PROJETOS 3, 4 e 5 — ainda não identificados.
+       PROJETOS 3, 4 e 5 — ainda não definidos.
 
        Nada aqui foi presumido de propósito: nome, tecnologias e contexto
-       ficam em branco até você indicar QUAIS projeto reais entram.
+       ficam em branco até você indicar quais projetos reais entram.
 
-       Ordem de prioridade para escolher (do mais para o menos relevante):
-         1. Projetos acadêmicos da Fatec
-         2. Projetos interdisciplinares
-         3. Projetos profissionais que possam ser apresentados
-         4. Projetos pessoais relevantes
+       Se preferir publicar com menos projetos, apague os blocos que não vai
+       usar — a grid se ajusta sozinha. Um portfólio com 2 projetos bem
+       descritos é melhor que 5 com placeholders.
 
        Ao preencher, troque também o `slug` por algo descritivo
        (só minúsculas e hífens) — ele é o que vai na URL.
@@ -332,56 +331,75 @@ const DATA = {
        projeto tem.
        ---------------------------------------------------------------------- */
     {
-      slug: "projeto-03",
-      nome: "[INFORMAR NOME DO PROJETO]",
-      semestre: "[INFORMAR SEMESTRE]",
-      categoria: "[INFORMAR CONTEXTO]",
-      periodo: "[INFORMAR PERÍODO]",
+      slug: "vital-reciclagem",
+      nome: "VITAL Reciclagem — Gestão de reciclagem de óleo",
+      categoria: "Acadêmico", // ex: "Acadêmico", "Pessoal", "Estudo"
+      periodo: "3º semestre",
       destaque: false,
       resumo:
-        "Projeto ainda não definido. Escolha um projeto real dos seus primeiros semestres e preencha os campos deste bloco em assets/js/data.js.",
+        "Plataforma para gerenciar a operação de uma empresa de reciclagem de óleo — da solicitação de coleta até a entrega — com perfis distintos para cliente, motorista e administrador. Front-end em Vue 3 e back-end em Python com Flask.",
 
-      capa: "",
+      capa: "assets/img/projetos/Vital-Logo.png",
 
       descricao: [
-        "[INFORMAR: qual problema o projeto resolve]",
-        "[INFORMAR: qual era o objetivo e como o sistema funciona]",
-        "[INFORMAR: qual foi o contexto — disciplina, semestre ou empresa]",
+        "A operação de uma recicladora de óleo envolve muitas pontas: o cliente pede a coleta, um motorista precisa ser acionado e fazer a entrega, o estoque de óleo reciclado precisa ser atualizado e o administrador precisa enxergar tudo isso. O VITAL centraliza esse fluxo em um único sistema, do pedido de coleta ao processamento.",
+        "O sistema é dividido por perfil de acesso. O <strong>cliente</strong> se cadastra, abre solicitações de coleta e acompanha o histórico. O <strong>motorista</strong> visualiza as solicitações atribuídas e confirma a coleta realizada. O <strong>administrador</strong> gerencia produtos e estoque, clientes, motoristas, solicitações, relatórios e certificados, além de disparar notificações por e-mail sobre o status dos pedidos.",
+        "O front-end é uma SPA em Vue 3 com Vue Router, consumindo a API via Axios. A autenticação é feita por JWT: o token emitido pela API é decodificado no front-end para identificar o perfil do usuário e liberar as rotas correspondentes. O back-end é uma API em <strong>Python com Flask</strong>, com o ambiente containerizado em <strong>Docker</strong> usando imagem do <strong>PostgreSQL</strong> para o banco.",
       ],
 
       funcionalidades: [
-        "[INFORMAR FUNCIONALIDADE 1]",
-        "[INFORMAR FUNCIONALIDADE 2]",
+        "Perfis distintos de acesso — cliente, motorista e administrador — cada um com sua área e suas rotas",
+        "Cadastro e login separados por perfil, com autenticação JWT",
+        "Abertura e acompanhamento de solicitações de coleta de óleo pelo cliente",
+        "Atribuição das solicitações aos motoristas e confirmação de coleta realizada",
+        "Gestão de produtos e controle do estoque de óleo reciclado",
+        "Gestão de clientes e de administradores (listagem, edição e exclusão)",
+        "Relatórios da operação e emissão de certificados em PDF",
+        "Notificações por e-mail sobre o status das solicitações",
       ],
 
-      tecnologias: ["[INFORMAR TECNOLOGIAS]"],
+      tecnologias: [
+        "Vue.js 3", "Vue Router", "Vite", "Axios", "JWT", "jsPDF",
+        "Python", "Flask", "APIs REST", "PostgreSQL", "Docker", "JavaScript",
+      ],
 
       participacao: [
-        "[INFORMAR: o que exatamente você desenvolveu neste projeto]",
-        "[INFORMAR: quais tecnologias você usou na sua parte]",
+        "Desenvolvimento da API do sistema em <strong>Python com Flask</strong>, expondo os endpoints REST consumidos pelo front-end.",
+        "Modelagem e persistência dos dados em <strong>PostgreSQL</strong> (usuários por perfil, produtos, estoque e solicitações de coleta).",
+        "Configuração do ambiente em <strong>Docker</strong>, subindo o banco a partir da imagem oficial do PostgreSQL e usando variáveis de ambiente para a conexão.",
+        "Implementação da autenticação com JWT e do controle de acesso por perfil (cliente, motorista e administrador) nas rotas da API.",
+        "Desenvolvimento do front-end em <strong>Vue 3 com Vite</strong>, organizando a aplicação em views por perfil e componentes reutilizáveis (tabelas, modais e formulários de cadastro, edição e exclusão).",
+        "Construção das telas de autenticação e cadastro separadas por perfil e do roteamento com <strong>Vue Router</strong>, liberando cada área conforme o perfil lido do token JWT.",
+        "Implementação das áreas do sistema: solicitação e histórico de coletas do cliente, listagem de coletas do motorista com confirmação de entrega, e painel administrativo com produtos, estoque, clientes, solicitações e relatórios.",
+        "Consumo da API com <strong>Axios</strong> e geração dos certificados e relatórios em PDF no próprio navegador com jsPDF.",
+        "Integração de ponta a ponta entre o front-end e a API, definindo os contratos de requisição e resposta dos dois lados.",
       ],
 
-      repo: "[INFORMAR LINK DO REPOSITÓRIO]",
-      demo: "",
-      screenshots: [],
+      repo: "https://github.com/RafaelBorges22/Vital-Front",
+      demo: "https://vitalreciclagem.vercel.app",
+
+      screenshots: [
+        { src: "assets/img/projetos/Vital.png", legenda: "Página Inicial" },
+        { src: "assets/img/projetos/Vital-Login.png", legenda: "Login por perfil de usuário" },
+        { src: "assets/img/projetos/Vital-Cadastro.png", legenda: "Cadastro de usuário" },
+      ],
     },
 
     {
       slug: "projeto-04",
       nome: "[INFORMAR NOME DO PROJETO]",
-      semestre: "[INFORMAR SEMESTRE]",
       categoria: "[INFORMAR CONTEXTO]",
       periodo: "[INFORMAR PERÍODO]",
       destaque: false,
       resumo:
-        "Projeto ainda não definido. Escolha um projeto real dos seus primeiros semestres e preencha os campos deste bloco em assets/js/data.js.",
+        "Projeto ainda não definido. Escolha um projeto real e preencha os campos deste bloco em assets/js/data.js — ou apague o bloco se não for usar.",
 
       capa: "",
 
       descricao: [
         "[INFORMAR: qual problema o projeto resolve]",
         "[INFORMAR: qual era o objetivo e como o sistema funciona]",
-        "[INFORMAR: qual foi o contexto — disciplina, semestre ou empresa]",
+        "[INFORMAR: em que contexto o projeto foi feito — pessoal, estudo, empresa]",
       ],
 
       funcionalidades: [
@@ -402,38 +420,41 @@ const DATA = {
     },
 
     {
-      slug: "projeto-05",
-      nome: "[INFORMAR NOME DO PROJETO]",
-      semestre: "[INFORMAR SEMESTRE]",
-      categoria: "[INFORMAR CONTEXTO]",
-      periodo: "[INFORMAR PERÍODO]",
+      slug: "up-barber",
+      nome: "Totem de Pagamento UP BARBER",
+      categoria: "Academico",
+      periodo: "5º semestre",
       destaque: false,
       resumo:
-        "Projeto ainda não definido. Escolha um projeto real dos seus primeiros semestres e preencha os campos deste bloco em assets/js/data.js.",
+        "Projeto dedicado a fazer um totem de pagamento para barbearias, com integração de API de pagamento, QR Code e interface amigável para o usuário.",
 
-      capa: "",
+      capa: "assets/img/projetos/up-capa.png",
 
       descricao: [
-        "[INFORMAR: qual problema o projeto resolve]",
-        "[INFORMAR: qual era o objetivo e como o sistema funciona]",
-        "[INFORMAR: qual foi o contexto — disciplina, semestre ou empresa]",
-      ],
+        "A necessidade de um atendente para efetuar pagamentos em barbearias, o projeto visa automatizar o processo de pagamento, permitindo que os clientes realizem transações de forma rápida e segura.",
+        "O sistema funciona através de um totem interativo, onde o cliente seleciona os serviços desejados, gera um QR Code e realiza o pagamento via aplicativo bancário ou cartão de debito ou crédito utilizando NFC",
+        "O projeto foi desenvolvido no contexto acadêmico, como parte de um curso de desenvolvimento de software, com o objetivo de aplicar conhecimentos em integração de APIs e desenvolvimento de interfaces.",],
 
       funcionalidades: [
-        "[INFORMAR FUNCIONALIDADE 1]",
-        "[INFORMAR FUNCIONALIDADE 2]",
+        "Pagamentos via Pix utilizando o QR code gerado pelo Efi Bank",
+        "Pagamento via Cartão de Débito ou Crédito utilizando NFC atrvés do InfinitePay",
       ],
 
-      tecnologias: ["[INFORMAR TECNOLOGIAS]"],
+      tecnologias: ["Java", "Spring Boot", "React", "Docker", "PostgreSQL", "NFC", "API de Pagamento"],
 
       participacao: [
-        "[INFORMAR: o que exatamente você desenvolveu neste projeto]",
-        "[INFORMAR: quais tecnologias você usou na sua parte]",
+        "Desenvolvimento do back-end em Java com Spring Boot, incluindo a integração com APIs de pagamento e a lógica de geração de QR Codes.",
+        "Implementação da interface do usuário em React, garantindo uma experiência amigável e responsiva para os clientes.",
       ],
 
-      repo: "[INFORMAR LINK DO REPOSITÓRIO]",
+      repo: "https://github.com/RafaelBorges22/PI-5SM-FRONT",
       demo: "",
-      screenshots: [],
+      screenshots: [
+        { src: "assets/img/projetos/Up-barbeiro.jpg", legenda: "Selecionando Barbeiro do qual foi atendido" },
+        { src: "assets/img/projetos/Up-carrinho.jpg", legenda: "Selecionando qual serviço foi realizado pelo barbeiro" },
+        { src: "assets/img/projetos/Up-pagamento.jpg", legenda: "Tela de selecionar forma de pagamento" },
+        { src: "assets/img/projetos/Up-QR.jpg", legenda: "Tela de gerar QR Code para pagamentos PIX" },
+      ],
     },
   ],
 

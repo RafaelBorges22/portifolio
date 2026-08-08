@@ -1,0 +1,99 @@
+# ==========================================================================
+# .gitignore — Portfólio
+# --------------------------------------------------------------------------
+# Este é um site estático: HTML, CSS, JS e imagens. Tudo que o site precisa
+# para funcionar DEVE ser versionado — inclusive as imagens em
+# assets/img/, que são carregadas pelo GitHub Pages.
+#
+# O que fica de fora é só o que não pertence ao site: material de trabalho,
+# lixo do sistema operacional, configuração de editor e arquivos temporários.
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+# Material de trabalho — não faz parte do site publicado
+# --------------------------------------------------------------------------
+# Contexto usado durante a construção do portfólio: enunciado da disciplina,
+# anotações de perfil e listas de pendências internas.
+context/
+
+# Especificações e documentos de design gerados durante o desenvolvimento.
+docs/
+
+# --------------------------------------------------------------------------
+# Sistema operacional
+# --------------------------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# --------------------------------------------------------------------------
+# Editores e IDEs
+# --------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# --------------------------------------------------------------------------
+# Ferramentas de IA / assistentes
+# --------------------------------------------------------------------------
+.claude/
+.cursor/
+.aider*
+
+# --------------------------------------------------------------------------
+# Node — não é usado hoje, mas fica pronto caso você adicione um build
+# (Vite, Sass, um servidor local etc.)
+# --------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.cache/
+
+# --------------------------------------------------------------------------
+# Variáveis de ambiente e segredos
+# --------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --------------------------------------------------------------------------
+# Arquivos temporários e de backup
+# --------------------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+*.old
+*.orig
+*.rej
+
+# --------------------------------------------------------------------------
+# Arquivos que às vezes caem na pasta sem querer
+# --------------------------------------------------------------------------
+*.zip
+*.rar
+*.7z
+*.psd
+*.ai

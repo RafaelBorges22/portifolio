@@ -1,12 +1,12 @@
 # Portfólio — Rafael Mascarenhas Borges
 
-Portfólio acadêmico e profissional desenvolvido para a disciplina de
-**Laboratório de Desenvolvimento Multiplataforma**.
+Portfólio pessoal de um desenvolvedor Full Stack: apresentação, stack técnica,
+experiência profissional e uma página dedicada para cada projeto.
 
 HTML, CSS e JavaScript puros. **Sem build, sem npm, sem dependências de runtime** —
 basta abrir o arquivo ou publicar a pasta.
 
-> **Antes de entregar, leia [`PENDENCIAS.md`](PENDENCIAS.md).** Os dados que ainda não
+> **Antes de publicar, leia [`PENDENCIAS.md`](PENDENCIAS.md).** Os dados que ainda não
 > foram confirmados aparecem destacados em âmbar na página, de propósito.
 
 ---
@@ -14,19 +14,18 @@ basta abrir o arquivo ou publicar a pasta.
 ## Estrutura
 
 ```
-index.html              Página mestra (dados pessoais + cards dos projetos)
-projeto.html            Tela de apresentação de um projeto — ?p=<slug>
+index.html              Página principal (apresentação + cards dos projetos)
+projeto.html            Página de um projeto — ?p=<slug>
 PENDENCIAS.md           O que falta preencher
 assets/
   css/style.css         Design system completo (tokens, componentes, responsivo)
   js/data.js            ← TODO O CONTEÚDO ESTÁ AQUI
   js/ui.js              Helpers: ícones, placeholders, lightbox, reveal, nav
-  js/home.js            Renderiza a página mestra
-  js/projeto.js         Renderiza a tela de projeto
-  img/foto.jpg          Sua foto (4:5)
+  js/home.js            Renderiza a página principal
+  js/projeto.js         Renderiza a página de projeto
+  img/foto.jpg          Foto de perfil (4:5)
   img/projetos/         Capas e screenshots dos projetos
-docs/superpowers/specs/ Documento de design
-context/                Requisito da disciplina e contexto de dados
+docs/                   Documento de design
 ```
 
 ## Como editar o conteúdo
@@ -42,10 +41,9 @@ Copie um objeto do array `projetos` e ajuste. O `slug` define a URL:
 {
   slug: "meu-projeto",          // → projeto.html?p=meu-projeto
   nome: "Nome do Projeto",
-  semestre: "3º semestre",
-  categoria: "Acadêmico",
-  periodo: "2024/2",
-  resumo: "Uma ou duas frases — aparece no card da home.",
+  categoria: "Pessoal",         // Pessoal · Profissional · Estudo...
+  periodo: "2025",
+  resumo: "Uma ou duas frases — aparece no card da página principal.",
   capa: "assets/img/projetos/meu-projeto-capa.png",
   descricao: ["Parágrafo 1...", "Parágrafo 2..."],
   funcionalidades: ["Funcionalidade A", "Funcionalidade B"],
@@ -59,13 +57,18 @@ Copie um objeto do array `projetos` e ajuste. O `slug` define a URL:
 }
 ```
 
-O card na home e a tela do projeto são gerados automaticamente.
+O card e a página do projeto são gerados automaticamente.
+
+### Seções que aparecem e desaparecem
+
+`cursos`, `idiomas` e `experiencias` são arrays. **Array vazio remove a seção
+inteira** da página e o link correspondente do menu — nada de seção vazia no site.
 
 ### Placeholders
 
-Qualquer texto entre colchetes — `"[INFORMAR FACULDADE]"` — é renderizado com
-destaque âmbar tracejado. É o sinal de "dado ainda não confirmado". Substitua pelo
-dado real; não deixe nenhum na versão entregue.
+Qualquer texto entre colchetes — `"[INFORMAR PERÍODO]"` — é renderizado com destaque
+âmbar tracejado. É o sinal de "dado ainda não confirmado". Substitua pelo dado real;
+não deixe nenhum na versão publicada.
 
 ### Imagens
 
@@ -96,11 +99,11 @@ Abrir `index.html` com duplo clique também funciona na maioria dos navegadores.
 
 ---
 
-## Publicando no GitHub Pages (requisito 10)
+## Publicando no GitHub Pages
 
 ```bash
 git add .
-git commit -m "Portfólio acadêmico"
+git commit -m "Atualiza portfólio"
 git push origin main
 ```
 

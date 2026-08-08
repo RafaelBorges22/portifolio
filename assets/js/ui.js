@@ -344,7 +344,6 @@ function renderFooter(alvo, data) {
           <span class="brand__text">${esc(data.perfil.nomeCurto)}</span>
         </a>
         <p class="footer__legal">
-          Portfólio acadêmico · ${esc(data.formacao.disciplina)}<br>
           © <span data-ano></span> ${esc(data.perfil.nome)}
         </p>
       </div>

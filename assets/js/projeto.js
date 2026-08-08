@@ -57,9 +57,8 @@
 
         <div class="p-hero__badges reveal">
           <span class="badge">${String(indice + 1).padStart(2, "0")} de ${String(lista.length).padStart(2, "0")}</span>
-          <span class="badge">${icon("calendar", 13)} ${val(projeto.semestre)}</span>
+          <span class="badge">${icon("calendar", 13)} ${val(projeto.periodo)}</span>
           <span class="badge">${val(projeto.categoria)}</span>
-          ${has(projeto.periodo) ? `<span class="badge">${esc(projeto.periodo)}</span>` : ""}
         </div>
 
         <h1 class="p-hero__title reveal">${val(projeto.nome)}</h1>
@@ -201,10 +200,6 @@
         <div class="card p-aside__card">
           <p class="p-aside__label">Ficha do projeto</p>
           <dl class="datalist" style="padding:0">
-            <div class="datalist__row" style="grid-template-columns:6.5rem 1fr">
-              <dt class="datalist__key">Semestre</dt>
-              <dd class="datalist__val">${val(projeto.semestre)}</dd>
-            </div>
             <div class="datalist__row" style="grid-template-columns:6.5rem 1fr">
               <dt class="datalist__key">Contexto</dt>
               <dd class="datalist__val">${val(projeto.categoria)}</dd>
