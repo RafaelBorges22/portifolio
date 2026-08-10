@@ -195,70 +195,54 @@ const DATA = {
      ------------------------------------------------------------------------ */
   projetos: [
     {
-      slug: "gerenciamento-de-projetos",
-      nome: "Sistema de Gerenciamento de Projetos e Processos Operacionais",
-      categoria: "Profissional",
-      periodo: "[INFORMAR PERÍODO]", // ex: "2025" ou "2025 — atual"
+      slug: "fluxora",
+      nome: "Fluxora — Plataforma para nutricionistas de gestantes",
+      categoria: "Acadêmico · Projeto Interdisciplinar",
+      periodo: "1º semestre",
       destaque: true,
       resumo:
-        "Aplicação web completa para gerenciar projetos, serviços, fornecedores, alocação de recursos, consumo mensal e informações financeiras, com API REST em FastAPI e front-end em React.",
+        "Projeto interdisciplinar do 1º semestre: plataforma web para nutricionistas que atendem gestantes, com site de apresentação, planos, depoimentos, contato e área de acesso com cadastro e login. Front-end em React com Tailwind CSS e back-end em PHP.",
 
-      capa: "assets/img/projetos/gerenciamento-capa.png",
+      capa: "assets/img/projetos/Fluxora-Home.png",
 
       descricao: [
-        "O sistema resolve o controle manual e disperso de projetos e alocações que antes era feito em planilhas: cadastro de projetos, serviços associados, POs, fornecedores, alocação de recursos e apuração do consumo mensal ficavam em arquivos separados, sem rastreabilidade e sujeitos a erro de cálculo.",
-        "A solução centraliza esses dados em uma API REST com PostgreSQL. Cada projeto passa a ter seus serviços, POs e alocações vinculados, e o consumo mensal é calculado a partir das horas e valores lançados, alimentando os relatórios exportados em Excel.",
-        "O acesso é controlado por autenticação JWT: o login gera o token, o front-end o armazena e o envia nas requisições autenticadas, e o back-end valida o token liberando as rotas conforme as permissões do usuário. Um endpoint <code>/auth/me</code> recupera os dados do usuário autenticado.",
+        "A Fluxora nasceu como projeto interdisciplinar do 1º semestre, reunindo em um único trabalho os conteúdos de desenvolvimento web, banco de dados e levantamento de requisitos vistos ao longo do semestre.",
+        "O produto é uma plataforma voltada para <strong>nutricionistas que acompanham gestantes</strong> — um público em que o acompanhamento nutricional precisa ser contínuo e personalizado. O site apresenta a proposta da plataforma, as seções <em>Sobre</em>, <em>Planos</em>, <em>Depoimentos</em> e <em>Contato</em>, e leva o visitante até a área de acesso, onde ele se cadastra e entra na conta.",
+        "O front-end foi construído em <strong>React</strong>, com a interface estilizada em <strong>Tailwind CSS</strong> e organizada em componentes reutilizáveis (cabeçalho, seções da landing page, cards de plano e de depoimento, formulários e rodapé). O back-end foi feito em <strong>PHP</strong>, responsável pelo cadastro de usuários, pela validação das credenciais no login e pela persistência dos dados enviados pelo site.",
       ],
 
       funcionalidades: [
-        "Cadastro de projetos, usuários, serviços e fornecedores",
-        "Associação de serviços e POs aos projetos",
-        "Controle de alocações por fornecedor, perfil e frente",
-        "Apuração de consumo mensal com cálculo de horas",
-        "Cálculos financeiros a partir dos valores unitários e das horas apuradas",
-        "Geração de relatórios exportados em Excel",
-        "Upload e gerenciamento de arquivos",
-        "Autenticação JWT com controle de acesso por permissões",
-        "Integração completa entre front-end e API REST",
-      ],
-
-      // Detalhe técnico que mostra domínio da regra de negócio.
-      detalhes: [
-        {
-          titulo: "Regra de cálculo da alocação",
-          conteudo:
-            "Total de horas = quantidade de recursos × quantidade semanal × 44<br>Valor total = total de horas × valor unitário",
-        },
+        "Landing page com navegação entre as seções Início, Sobre, Planos, Depoimentos e Contato",
+        "Apresentação da proposta da plataforma para nutricionistas de gestantes",
+        "Seção de planos e de depoimentos de usuárias",
+        "Formulário de contato",
+        "Cadastro de usuário",
+        "Login com e-mail e senha, exibir/ocultar senha e recuperação de senha",
+        "Layout responsivo construído com utilitários do Tailwind CSS",
       ],
 
       tecnologias: [
-        "Python", "FastAPI", "SQLAlchemy", "Pydantic", "Alembic",
-        "PostgreSQL", "JWT", "React", "Vite", "Axios", "Docker",
+        "React", "JavaScript", "Tailwind CSS", "HTML", "CSS", "PHP",
       ],
 
       participacao: [
-        "Modelagem das entidades do domínio (projetos, serviços, alocações, fornecedores, POs e consumo mensal) e dos relacionamentos no PostgreSQL.",
-        "Construção da API REST em FastAPI com separação em camadas: controllers, services, repositories, entities e schemas.",
-        "Versionamento do schema do banco com Alembic (migrations) e mapeamento com SQLAlchemy, usando UUID e enums.",
-        "Implementação do fluxo de autenticação com JWT, rotas protegidas e controle de acesso, incluindo o endpoint <code>/auth/me</code>.",
-        "Desenvolvimento das telas em React com Vite, React Router e rotas protegidas, consumindo a API via Axios.",
-        "Criação de componentes próprios de lançamento de horas (controle <code>− valor +</code>) e dos formulários de alocação.",
-        "Implementação dos cálculos de horas e valores e da exportação dos relatórios em Excel.",
-        "Configuração do ambiente com Docker e Docker Compose (API, PostgreSQL e pgAdmin), volumes e variáveis de ambiente.",
+        "Participação no levantamento de requisitos e na definição das telas e seções da plataforma junto com o grupo.",
+        "Desenvolvimento do front-end em <strong>React</strong>, dividindo a aplicação em componentes reutilizáveis para as seções da landing page, cards e formulários.",
+        "Estilização de toda a interface com <strong>Tailwind CSS</strong>, definindo a identidade visual (paleta em roxo e rosa) e o comportamento responsivo do layout.",
+        "Construção da tela de acesso — login e cadastro — com validação dos campos e o controle de exibir/ocultar senha.",
+        "Desenvolvimento do back-end em <strong>PHP</strong> para o cadastro de usuários, a validação das credenciais no login e a persistência dos dados.",
+        "Integração entre o front-end em React e o back-end em PHP, definindo o formato dos dados enviados e das respostas tratadas na interface.",
       ],
 
       // Substitua pelo link real do repositório. Se for privado, deixe "".
       repo: "[INFORMAR LINK DO REPOSITÓRIO]",
       demo: "",
 
-      // Coloque os arquivos em assets/img/projetos/ com estes nomes,
-      // ou ajuste os caminhos abaixo.
       screenshots: [
-        { src: "assets/img/projetos/gerenciamento-login.png", legenda: "Tela de login com autenticação JWT" },
-        { src: "assets/img/projetos/gerenciamento-projetos.png", legenda: "Listagem e cadastro de projetos" },
-        { src: "assets/img/projetos/gerenciamento-alocacoes.png", legenda: "Controle de alocações e cálculo de horas" },
-        { src: "assets/img/projetos/gerenciamento-relatorios.png", legenda: "Geração de relatórios em Excel" },
+        { src: "assets/img/projetos/Fluxora-Home.png", legenda: "Página inicial com a apresentação da plataforma" },
+        { src: "assets/img/projetos/Fluxora-Login.png", legenda: "Tela de acesso — login e cadastro de usuário" },
+        { src: "assets/img/projetos/Fluxora-Footer.png", legenda: "Seção de depoimentos e rodapé do site" },
+        { src: "assets/img/projetos/Fluxora-Logo.png", legenda: "Identidade visual da Fluxora" },
       ],
     },
 
