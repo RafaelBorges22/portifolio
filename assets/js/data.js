@@ -297,23 +297,6 @@ const DATA = {
       ],
     },
 
-    /* ----------------------------------------------------------------------
-       PROJETOS 3, 4 e 5 — ainda não definidos.
-
-       Nada aqui foi presumido de propósito: nome, tecnologias e contexto
-       ficam em branco até você indicar quais projetos reais entram.
-
-       Se preferir publicar com menos projetos, apague os blocos que não vai
-       usar — a grid se ajusta sozinha. Um portfólio com 2 projetos bem
-       descritos é melhor que 5 com placeholders.
-
-       Ao preencher, troque também o `slug` por algo descritivo
-       (só minúsculas e hífens) — ele é o que vai na URL.
-
-       Regra: só liste em `tecnologias` o que realmente foi usado NAQUELE
-       projeto. E em `participacao`, descreva o que VOCÊ fez, não o que o
-       projeto tem.
-       ---------------------------------------------------------------------- */
     {
       slug: "vital-reciclagem",
       nome: "VITAL Reciclagem — Gestão de reciclagem de óleo",
@@ -370,37 +353,59 @@ const DATA = {
     },
 
     {
-      slug: "projeto-04",
-      nome: "[INFORMAR NOME DO PROJETO]",
-      categoria: "[INFORMAR CONTEXTO]",
-      periodo: "[INFORMAR PERÍODO]",
+      slug: "kazu-tatoo",
+      nome: "Kazu Tatoo — Sistema de agendamento para studio de tatuagem",
+      categoria: "Acadêmico",
+      periodo: "4º semestre",
       destaque: false,
       resumo:
-        "Projeto ainda não definido. Escolha um projeto real e preencha os campos deste bloco em assets/js/data.js — ou apague o bloco se não for usar.",
+        "Sistema de agendamento para um studio de tatuagem: site de apresentação do tatuador, galeria de trabalhos e fluxo de solicitação de orçamento e agendamento de sessões. Front-end em Vue.js com TypeScript, back-end em Java com Spring Boot e ambiente containerizado com Docker.",
 
-      capa: "",
+      capa: "assets/img/projetos/KazuTatoo-Home.png",
 
       descricao: [
-        "[INFORMAR: qual problema o projeto resolve]",
-        "[INFORMAR: qual era o objetivo e como o sistema funciona]",
-        "[INFORMAR: em que contexto o projeto foi feito — pessoal, estudo, empresa]",
+        "O agendamento em um studio de tatuagem costuma acontecer por mensagens soltas: o cliente manda a ideia da arte, o tatuador responde com um orçamento e os dois combinam a data por conversa. O Kazu Tatoo transforma esse fluxo em um sistema, reunindo em um só lugar a apresentação do studio, o pedido de orçamento e o agendamento das sessões.",
+        "O site apresenta o trabalho do tatuador — a seção <em>Meu trabalho</em>, com a trajetória e o estilo, a seção <em>Sobre tatuagens</em> e uma <em>Galeria de trabalhos</em> em carrossel com as artes já feitas. A partir da home, o visitante entra no fluxo de <strong>Faça seu orçamento</strong>, onde descreve a tatuagem desejada e solicita o agendamento; o cadastro e o login separam o acesso do cliente do acesso do studio.",
+        "O front-end foi construído em <strong>Vue.js com TypeScript</strong>, com as telas divididas em componentes e as respostas da API tipadas. O back-end é uma API REST em <strong>Java com Spring Boot</strong>, responsável pelo cadastro e autenticação dos usuários, pelas solicitações de orçamento e pela agenda do studio. Toda a aplicação sobe em containers com <strong>Docker</strong>.",
       ],
 
       funcionalidades: [
-        "[INFORMAR FUNCIONALIDADE 1]",
-        "[INFORMAR FUNCIONALIDADE 2]",
+        "Landing page do studio com apresentação do tatuador e do seu estilo de trabalho",
+        "Galeria de trabalhos em carrossel navegável, com indicadores de posição",
+        "Cadastro e login de usuários, com acesso separado para cliente e studio",
+        "Solicitação de orçamento a partir da descrição da tatuagem desejada",
+        "Agendamento de sessões, com controle das datas e horários disponíveis",
+        "Acompanhamento das solicitações e dos agendamentos pelo cliente",
+        "Área do studio para visualizar e gerenciar os pedidos e a agenda",
+        "Layout responsivo, adaptado para acesso pelo celular",
       ],
 
-      tecnologias: ["[INFORMAR TECNOLOGIAS]"],
+      tecnologias: [
+        "Vue.js", "TypeScript", "JavaScript", "HTML", "CSS",
+        "Java", "Spring Boot", "APIs REST", "Docker",
+      ],
 
       participacao: [
-        "[INFORMAR: o que exatamente você desenvolveu neste projeto]",
-        "[INFORMAR: quais tecnologias você usou na sua parte]",
+        "Atuação como <strong>desenvolvedor full stack</strong>, do modelo de dados até a interface entregue ao usuário.",
+        "Desenvolvimento da API REST em <strong>Java com Spring Boot</strong>, com os endpoints de cadastro, autenticação, orçamento e agendamento.",
+        "Modelagem das entidades do domínio — usuário, solicitação de orçamento e agendamento — e da persistência dos dados.",
+        "Implementação das regras de agendamento, controlando as datas e horários disponíveis para evitar conflito entre sessões.",
+        "Desenvolvimento do front-end em <strong>Vue.js com TypeScript</strong>, organizando as telas em componentes reutilizáveis e tipando os dados trocados com a API.",
+        "Construção das telas do site: home, seções de apresentação, galeria de trabalhos em carrossel e o fluxo de orçamento e agendamento.",
+        "Implementação do cadastro e do login, com o controle de acesso às áreas de cliente e do studio.",
+        "Configuração do ambiente em <strong>Docker</strong>, containerizando a aplicação e o banco de dados.",
+        "Integração de ponta a ponta entre o front-end e a API, definindo os contratos de requisição e resposta dos dois lados.",
       ],
 
-      repo: "[INFORMAR LINK DO REPOSITÓRIO]",
+      repo: "https://github.com/RafaelBorges22/Project-LDW",
       demo: "",
-      screenshots: [],
+
+      screenshots: [
+        { src: "assets/img/projetos/KazuTatoo-Home.png", legenda: "Página inicial do studio com a chamada para o orçamento" },
+        { src: "assets/img/projetos/KazuTatoo-Sobre.png", legenda: "Seção Meu trabalho, com a apresentação do tatuador" },
+        { src: "assets/img/projetos/KazuTatoo-Tatuagens.png", legenda: "Seção Sobre tatuagens, explicando a proposta do studio" },
+        { src: "assets/img/projetos/KazuTatoo-Carrossel.png", legenda: "Galeria de trabalhos em carrossel" },
+      ],
     },
 
     {
