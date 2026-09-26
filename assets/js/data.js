@@ -198,15 +198,15 @@ const DATA = {
       slug: "fluxora",
       nome: "Fluxora — Plataforma para nutricionistas de gestantes",
       categoria: "Acadêmico · Projeto Interdisciplinar",
-      periodo: "1º semestre",
+      periodo: "2º semestre",
       destaque: true,
       resumo:
-        "Projeto interdisciplinar do 1º semestre: plataforma web para nutricionistas que atendem gestantes, com site de apresentação, planos, depoimentos, contato e área de acesso com cadastro e login. Front-end em React com Tailwind CSS e back-end em PHP.",
+        "Projeto interdisciplinar do 2º semestre: plataforma web para nutricionistas que atendem gestantes, com site de apresentação, planos, depoimentos, contato e área de acesso com cadastro e login. Front-end em React com Tailwind CSS e back-end em PHP.",
 
       capa: "assets/img/projetos/Fluxora-Home.png",
 
       descricao: [
-        "A Fluxora nasceu como projeto interdisciplinar do 1º semestre, reunindo em um único trabalho os conteúdos de desenvolvimento web, banco de dados e levantamento de requisitos vistos ao longo do semestre.",
+        "A Fluxora nasceu como projeto interdisciplinar do 2º semestre, reunindo em um único trabalho os conteúdos de desenvolvimento web, banco de dados e levantamento de requisitos vistos ao longo do semestre.",
         "O produto é uma plataforma voltada para <strong>nutricionistas que acompanham gestantes</strong> — um público em que o acompanhamento nutricional precisa ser contínuo e personalizado. O site apresenta a proposta da plataforma, as seções <em>Sobre</em>, <em>Planos</em>, <em>Depoimentos</em> e <em>Contato</em>, e leva o visitante até a área de acesso, onde ele se cadastra e entra na conta.",
         "O front-end foi construído em <strong>React</strong>, com a interface estilizada em <strong>Tailwind CSS</strong> e organizada em componentes reutilizáveis (cabeçalho, seções da landing page, cards de plano e de depoimento, formulários e rodapé). O back-end foi feito em <strong>PHP</strong>, responsável pelo cadastro de usuários, pela validação das credenciais no login e pela persistência dos dados enviados pelo site.",
       ],
@@ -243,57 +243,6 @@ const DATA = {
         { src: "assets/img/projetos/Fluxora-Login.png", legenda: "Tela de acesso — login e cadastro de usuário" },
         { src: "assets/img/projetos/Fluxora-Footer.png", legenda: "Seção de depoimentos e rodapé do site" },
         { src: "assets/img/projetos/Fluxora-Logo.png", legenda: "Identidade visual da Fluxora" },
-      ],
-    },
-
-    {
-      slug: "api-rest-fastapi",
-      nome: "API REST em FastAPI com arquitetura em camadas",
-      categoria: "[INFORMAR CONTEXTO]", // ex: "Pessoal", "Profissional", "Estudo"
-      periodo: "[INFORMAR PERÍODO]",
-      destaque: false,
-      resumo:
-        "API REST construída com FastAPI aplicando separação de responsabilidades em camadas, ORM com SQLAlchemy, validação com Pydantic, migrations com Alembic e autenticação JWT.",
-
-      capa: "assets/img/projetos/api-fastapi-capa.png",
-
-      descricao: [
-        "Projeto focado em organizar uma API de forma que ela continue sustentável quando cresce. Em vez de concentrar regra de negócio nas rotas, as responsabilidades ficam divididas em camadas: <strong>controllers</strong> recebem a requisição, <strong>services</strong> aplicam a regra de negócio, <strong>repositories</strong> falam com o banco, e <strong>entities/schemas</strong> definem o modelo persistido e o contrato de entrada e saída.",
-        "A persistência usa SQLAlchemy como ORM sobre PostgreSQL, com identificadores UUID, enums, relacionamentos entre entidades e migrations versionadas com Alembic. A validação de dados de entrada e saída é feita com Pydantic.",
-        "A autenticação segue o fluxo completo de JWT: validação de credenciais no login, emissão do token, envio do token nas requisições autenticadas e validação no back-end para liberar as rotas protegidas conforme as permissões.",
-      ],
-
-      funcionalidades: [
-        "Estrutura em camadas (controllers, services, repositories, entities, schemas)",
-        "CRUD completo com validação via Pydantic",
-        "Relacionamentos entre entidades e uso de UUID e enums",
-        "Migrations versionadas com Alembic",
-        "Autenticação JWT e rotas protegidas",
-        "Documentação automática da API (OpenAPI / Swagger)",
-        "Execução em container com PostgreSQL via Docker Compose",
-      ],
-
-      tecnologias: [
-        "Python", "FastAPI", "SQLAlchemy", "Pydantic", "Alembic",
-        "PostgreSQL", "JWT", "Docker", "Postman", "Swagger / OpenAPI",
-      ],
-
-      participacao: [
-        "Definição da estrutura de pastas e das fronteiras entre as camadas da aplicação.",
-        "Modelagem das entidades e dos relacionamentos, com UUID como chave e enums para estados do domínio.",
-        "Configuração do SQLAlchemy e do Alembic, criando e aplicando as migrations.",
-        "Implementação dos schemas Pydantic para validação de entrada e serialização de saída.",
-        "Implementação do login, geração e validação de JWT e proteção das rotas.",
-        "Testes manuais dos endpoints com Postman, cobrindo casos de sucesso e de erro.",
-        "Containerização da API e do banco com Docker Compose e uso de variáveis de ambiente.",
-      ],
-
-      repo: "[INFORMAR LINK DO REPOSITÓRIO]",
-      demo: "",
-
-      screenshots: [
-        { src: "assets/img/projetos/api-swagger.png", legenda: "Documentação automática gerada pelo FastAPI" },
-        { src: "assets/img/projetos/api-postman.png", legenda: "Testes dos endpoints no Postman" },
       ],
     },
 
@@ -443,6 +392,65 @@ const DATA = {
         { src: "assets/img/projetos/Up-carrinho.jpg", legenda: "Selecionando qual serviço foi realizado pelo barbeiro" },
         { src: "assets/img/projetos/Up-pagamento.jpg", legenda: "Tela de selecionar forma de pagamento" },
         { src: "assets/img/projetos/Up-QR.jpg", legenda: "Tela de gerar QR Code para pagamentos PIX" },
+      ],
+    },
+
+    {
+      slug: "smart-parking",
+      nome: "Smart Parking — Sistema inteligente de estacionamento",
+      categoria: "Acadêmico · Projeto Interdisciplinar",
+      periodo: "6º semestre",
+      destaque: false,
+      resumo:
+        "Sistema de estacionamento com IoT de ponta a ponta: um sensor ultrassônico no ESP32 detecta a ocupação da vaga, publica via MQTT e o back-end em Spring Boot com Kotlin atualiza o estado em tempo real para aplicativos Mobile, Web e Desktop feitos com Kotlin Multiplatform.",
+
+      capa: "assets/img/projetos/DashSmart-Desktop.png",
+
+      descricao: [
+        "O Smart Parking monitora a ocupação das vagas de um estacionamento sem depender de conferência manual. Cada vaga tem um sensor, e o estado dela chega aos aplicativos pela cadeia <strong>Veículo → HC-SR04 → ESP32 → MQTT → Mosquitto → Spring Boot → PostgreSQL → API REST → Mobile / Web / Desktop</strong>.",
+        "Na ponta física, um <strong>ESP32</strong> com o sensor ultrassônico <strong>HC-SR04</strong> mede a distância até o veículo e publica a leitura (LIVRE ou OCUPADA) em um tópico <strong>MQTT</strong> no broker <strong>Mosquitto</strong>. O back-end, uma API REST em <strong>Spring Boot com Kotlin</strong>, consome essas mensagens, atualiza a vaga, registra o histórico de medições e a última comunicação de cada dispositivo, e expõe os CRUDs de blocos, vagas, dispositivos e usuários com autenticação <strong>JWT</strong>.",
+        "Os três frontends saem de um único código-fonte em <strong>Kotlin Multiplatform com Compose</strong>: o mesmo app roda no Android, no navegador (WebAssembly) e no Desktop. Algumas decisões de domínio guiaram a implementação — uma vaga em <em>manutenção</em> não é sobrescrita pelo sensor, e a API continua no ar mesmo com o broker fora, reconectando sozinha quando ele volta.",
+      ],
+
+      funcionalidades: [
+        "Detecção da ocupação da vaga por sensor ultrassônico HC-SR04 ligado a um ESP32",
+        "Envio das leituras via MQTT para o broker Mosquitto e consumo automático pelo back-end",
+        "Atualização do estado das vagas em tempo real, com histórico de medições",
+        "Monitoramento dos dispositivos pela data da última comunicação, identificando sensores offline",
+        "CRUDs de blocos, vagas, dispositivos e usuários",
+        "Autenticação JWT com perfis ADMIN e USER",
+        "Vagas em manutenção protegidas contra alteração pelo sensor",
+        "Aplicativo único para Mobile (Android), Web e Desktop com Kotlin Multiplatform",
+        "Simulador de sensor para demonstrar o fluxo sem a placa física",
+        "Documentação interativa da API com Swagger",
+      ],
+
+      tecnologias: [
+        "Kotlin", "Spring Boot", "Kotlin Multiplatform", "Compose Multiplatform",
+        "PostgreSQL", "Flyway", "JWT", "MQTT", "Mosquitto", "ESP32", "C++",
+        "Docker", "Swagger / OpenAPI",
+      ],
+
+      participacao: [
+        "Desenvolvimento da API REST em <strong>Spring Boot com Kotlin</strong>, com os CRUDs de blocos, vagas, dispositivos e usuários.",
+        "Implementação da autenticação e autorização com <strong>JWT</strong>, separando os perfis ADMIN e USER.",
+        "Implementação do consumidor <strong>MQTT</strong> que recebe as leituras dos sensores e atualiza o estado das vagas, com reconexão automática ao broker.",
+        "Modelagem do banco em <strong>PostgreSQL</strong> com migrations versionadas em <strong>Flyway</strong>, incluindo o vínculo único entre vaga e dispositivo.",
+        "Desenvolvimento do firmware do <strong>ESP32</strong> em C++ para leitura do sensor HC-SR04 e publicação no tópico MQTT.",
+        "Desenvolvimento dos frontends Mobile, Web e Desktop a partir de um único código em <strong>Kotlin Multiplatform</strong>.",
+        "Configuração da infraestrutura com <strong>Docker Compose</strong> (PostgreSQL e Mosquitto) e scripts de automação para o simulador de sensor e para subir o app no emulador Android.",
+        "Escrita de 35 testes de integração cobrindo os CRUDs, a autenticação JWT e o consumo das mensagens MQTT.",
+      ],
+
+      // Substitua pelo link real do repositório. Se for privado, deixe "".
+      repo: "[INFORMAR LINK DO REPOSITÓRIO]",
+      demo: "",
+
+      screenshots: [
+        { src: "assets/img/projetos/DashSmart-Desktop.png", legenda: "Dashboard (Desktop) com a visão geral da ocupação e das vagas por bloco" },
+        { src: "assets/img/projetos/VagasSmart-Desktop.png", legenda: "Mapa de vagas por bloco, com cores por status e anéis por tipo de vaga" },
+        { src: "assets/img/projetos/DispostitivosSmart-Desktop.png", legenda: "Gestão dos sensores ESP32, com status online/offline e vaga vinculada" },
+        { src: "assets/img/projetos/LeituraSmart-Dektop.png", legenda: "Leituras dos sensores recebidas do broker MQTT em tempo real" },
       ],
     },
   ],
